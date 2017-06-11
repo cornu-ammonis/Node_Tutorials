@@ -1,0 +1,14 @@
+var hello = require('./hello');
+hello.world();
+
+(in hello.js):
+exports.world = function() {
+  console.log('Hello World');
+}
+
+exports is the object pulled in by require
+
+you can directly override the exports object 
+module.exports = function() {
+  // ...
+}
